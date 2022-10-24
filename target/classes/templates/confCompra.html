@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns:th="http://www.thymeleaf.org">
+
+<!-- Head -->
+<div th:replace="fragments/head :: head"></div>
+
+<body class="bg-dark" style="min-height: 100vh;">
+
+	<main class="background_compra p-3">
+		<div class="card mx-4 w-50">
+			<div class="card-body">
+				<h5 class="card-title">Parabéns, sua compra foi realizada!</h5>
+				<p class="card-text">Detalhes: </p>
+				<p th:text="'Nome: ' + ${cliente.nome}"></p>
+				<p th:text="'Email: ' + ${cliente.email}"></p>
+				<p th:text="'Telefone: ' + ${cliente.telefone}"></p>
+				<p th:text="'Cidade: ' + ${cliente.cidade}"></p>
+				<p th:text="'Estado: ' + ${cliente.estado}">
+				<p th:text="'CEP: ' + ${cliente.cep}"></p>
+				<p th:text="'País: ' + ${cliente.pais}"></p>
+				<p th:text="'Número do cartão: ' + ${cliente.num_cc}"></p>
+				<p th:text="'CVV: ' + ${cliente.num_cvv}"></p>
+				<p th:text="'Validade do cartão: ' + ${cliente.val_cc}"></p>
+				<p th:text="'Nome como está no cartão: ' + ${cliente.nom_cc}"></p>
+				<p th:text="'Data da ida: ' + ${cliente.data_ida}"></p>
+				<p th:text="'Data da volta: ' + ${cliente.data_ret}"></p>
+				<p>Data de hoje: <time th:text="${#dates.createNow()}"></time></p>
+				<p th:text="'Descrição da compra: ' + ${cliente.destino}"></p>
+				<div class="row text-center justify-content-center">
+					<a th:href="@{/}" type="submit" class="btn btn-primary" style="width: 30%;">Sair</a>
+				</div>
+			</div>
+		</div>
+	</main>
+
+</body>
+
+</html>

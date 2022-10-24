@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="pt-br" xmlns:th=" http://www.thymeleaf.org">
+
+
+<!-- Head -->
+<div th:replace="fragments/head :: head"></div>
+
+<body>
+
+
+	<!-- Main -->
+	<main class="background_update  img-fluid justify-content-center">
+		<section class="row w-75" style="margin-top: 20px;">
+			<div class="mb-3">
+				<h2>Editar Cliente</h2>
+			</div>
+
+			<form class="form" th:action="@{/update}" method="POST" id="clienteForm" th:object="${cliente}">
+				<fieldset>
+					<div class="row">
+						<div class="col-sm-12">
+							<label for="id">ID</label>
+						</div>
+						<div class="col-sm-12">
+							<input type="text" th:field="*{id}" class="form-control" readonly />
+						</div>
+					</div><br />
+					<div class="row mb-3">
+						<div class="col-12 mb-3">
+							<label for="nome" class="form-label">Nome completo</label>
+							<input type="text" class="form-control" id="nome" name="nome" th:field="*{nome}"
+								placeholder="Nome completo">
+						</div>
+
+					</div>
+					<div class="row mb-3">
+						<div class="col-lg-8 mb-3">
+							<label for="email" class="form-label">Endereço de Email</label> <input type="email"
+								class="form-control" id="email" name="email" th:field="*{email}"
+								placeholder="nome@exemplo.com">
+						</div>
+						<div class="col-lg-4 col-sm-12">
+							<label for="telefone" class="form-label">Telefone</label> <input type="tel"
+								class="form-control" id="telefone" name="telefone" th:field="*{telefone}">
+						</div>
+					</div>
+					<div class="row mb-3">
+						<div class="col-lg-4 col-sm-12 mb-3">
+							<label for="cidade" class="form-label">Cidade</label> <input type="text"
+								class="form-control" id="cidade" name="cidade" th:field="*{cidade}">
+						</div>
+						<div class="col-lg-1 col-sm-12 mb-3">
+							<label for="estado" class="form-label">Estado</label> <input type="text"
+								class="form-control" id="estado" name="estado" th:field="*{estado}">
+						</div>
+						<div class="col-lg-4 col-sm-12 mb-3">
+							<label for="pais" class="form-label">País</label> <input type="text" class="form-control"
+								id="pais" name="pais" th:field="*{pais}">
+						</div>
+						<div class="col-lg-3 col-sm-12">
+							<label for="cep" class="form-label">CEP</label> <input type="number" class="form-control"
+								id="cep" name="cep" th:field="*{cep}">
+						</div>
+					</div>
+					<div class="mb-3">
+						<h4>Dados da Compra</h4>
+					</div>
+					<div class="row mb-3">
+						<div class="col-10 mb-3">
+							<label for="num_cc" class="form-label">Número do cartão</label>
+							<input type="number" class="form-control" id="num_cc" name="num_cc"
+								placeholder="0000 0000 0000 0000" th:field="*{num_cc}">
+						</div>
+						<div class="col-lg-2 col-sm-12">
+							<label for="num_cvv" class="form-label">CVV</label>
+							<input type="number" class="form-control" id="num_cvv" name="num_cvv" placeholder="000"
+								th:field="*{num_cvv}">
+						</div>
+						<div class="row mb-3">
+							<div class="col-lg-8 col-sm-12 mb-3">
+								<label for="nom_cc" class="form-label">Nome como está
+									no cartão</label> <input type="text" class="form-control" id="nom_cc" name="nom_cc"
+									th:field="*{nom_cc}">
+							</div>
+							<div class="col-lg-4 col-sm-12">
+								<label for="val_cc" class="form-label">Data de validade</label> <input type="date"
+									class="form-control" id="val_cc" placeholder="00/00/0000" name="val_cc"
+									th:field="*{val_cc}">
+							</div>
+						</div>
+						<label for="opt" class="form-label">Escolha um destino</label>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="destino" th:field="*{destino}"
+								value="Promo Austrália R$8850,00" id="Promo_Austrália">
+							<label class="form-check-label" for="Promo_Austrália"> Pacote
+								Promocional Austrália R$ 8.850,00 </label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="destino" th:field="*{destino}"
+								value="Promo NZ R$8.450,00" id="Promo_ Nova_Zelândia">
+							<label class="form-check-label" for="Promo_Nova_Zelândia"> Pacote
+								Promocional Nova Zelândia R$ 8.450,00 </label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="destino" th:field="*{destino}"
+								value="Perth R$4500,00" id="Perth">
+							<label class="form-check-label" for="Perth"> Perth
+								R$ 4.500,00 </label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="destino" th:field="*{destino}"
+								value="Gold Coast R$5500,00" id="Gold Coast">
+							<label class="form-check-label" for="Gold Coast"> Gold
+								Coast R$ 5.500,00 </label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="destino" th:field="*{destino}"
+								value="Auckland R$4300,00" id="Auckland"> <label class="form-check-label"
+								for="Auckland">
+								Auckland R$ 4.300,00 </label>
+						</div>
+						<div class="form-check mb-5">
+							<input class="form-check-input" type="radio" name="destino" th:field="*{destino}"
+								value="Queenstown R$5300,00" id="Queenstown"> <label class="form-check-label"
+								for="Queenstown">
+								Queenstown R$ 5.300,00 </label>
+						</div>
+						<div class="mb-3">
+							<h6>*Digite as datas preferenciais de ida e retorno logo
+								abaixo, nosso time irá avaliar a disponibilidade e retornaremos
+								por email o quanto antes.</h6>
+						</div>
+						<div class="row mb-3">
+							<div class="col-lg-4 col-sm-12 mb-3">
+								<label for="data_ida" class="form-label">Data de Ida</label> <input type="date"
+									class="form-control" id="data_ida" name="data_ida" th:field="*{data_ida}"
+									placeholder="00/00/0000">
+							</div>
+							<div class="col-lg-4 col-sm-12">
+								<label for="data_ret" class="form-label">Data de Retorno</label> <input type="date"
+									class="form-control" id="data_ret" name="data_ret" th:field="*{data_ret}"
+									placeholder="00/00/0000">
+							</div>
+						</div>
+					</div>
+					<div class="row mb-5">
+						<div class="col-lg-6 com-sm-12" style="margin-top: 32px; text-align: center;">
+							<button type="submit" class="btn btn-success" id="comprar">Atualizar</button>
+						</div>
+						<div class="col-lg-6 col-sm-12" style="margin-top: 32px; text-align: center;">
+							<a th:href="@{/getAllClientes}" class="btn btn-danger">Voltar para Clientes</a>
+						</div>
+					</div>
+				</fieldset>
+			</form>
+		</section>
+	</main>
+	<!-- Main End -->
+
+
+	<!-- JavaScript -->
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>
