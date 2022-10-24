@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="pt-br" xmlns:th=" http://www.thymeleaf.org">
+
+
+<!-- Head -->
+<div th:replace="fragments/head :: head"></div>
+
+<body style="min-height: calc(100vh - 130px);">
+
+	<!-- Navbar -->
+	<div th:replace="fragments/nav :: nav"></div>
+
+	<!-- Main -->
+	<main class="background_NZ img-fluid">
+		<section class="row w-100 me-md-5 ms-sm-5" style="margin-top: 200px; justify-content: end;">
+
+			<!-- Auckland -->
+			<aside class="col-md-6 col-sm-12 p-2" style="width: 350px;">
+				<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+					<div class="carousel-indicators">
+						<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+							class="active" aria-current="true" aria-label="Slide 1"></button>
+						<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+							aria-label="Slide 2"></button>
+						<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+							aria-label="Slide 3"></button>
+						<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+							aria-label="Slide 3"></button>
+						<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+							aria-label="Slide 3"></button>
+					</div>
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<img src="Images/Auckland/AU_1.jpg" class="d-block w-100" alt="Auckland">
+						</div>
+						<div class="carousel-item">
+							<img src="Images/Auckland/AU_2.jpg" class="d-block w-100" alt="Auckland">
+						</div>
+						<div class="carousel-item">
+							<img src="Images/Auckland/AU_3.jpg" class="d-block w-100" alt="Auckland">
+						</div>
+						<div class="carousel-item">
+							<img src="Images/Auckland/AU_4.jpg" class="d-block w-100" alt="Auckland">
+						</div>
+						<div class="carousel-item">
+							<img src="Images/Auckland/AU_5.jpg" class="d-block w-100" alt="Auckland">
+						</div>
+					</div>
+					<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+						data-bs-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Previous</span>
+					</button>
+					<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+						data-bs-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Next</span>
+					</button>
+				</div>
+				<a th:href="@{/form}" class="card text-black text-decoration-none">
+					<h5 class="card-header">Auckland</h5>
+					<div class="card-body">
+						<div class="card-footer">
+							<p class="fw-bold fs-3">Por R$ 4.300,00</p>
+							<p class="text-secondary">*Inclui passagens de ida e volta.</p>
+						</div>
+					</div>
+				</a>
+			</aside>
+			<!-- Auckland End -->
+
+			<!-- Queenstown -->
+			<aside class="col-md-6 col-sm-12 p-2" style="width: 350px;">
+				<div id="carouselExampleIndicators2" class="carousel slide" data-bs-ride="true">
+					<div class="carousel-indicators">
+						<button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="0"
+							class="active" aria-current="true" aria-label="Slide 1"></button>
+						<button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="1"
+							aria-label="Slide 2"></button>
+						<button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="2"
+							aria-label="Slide 3"></button>
+						<button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="3"
+							aria-label="Slide 3"></button>
+						<button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="4"
+							aria-label="Slide 3"></button>
+					</div>
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<img src="Images/Queenstown/QU_1.jpg" class="d-block w-100" alt="Queenstown">
+						</div>
+						<div class="carousel-item">
+							<img src="Images/Queenstown/QU_2.jpg" class="d-block w-100" alt="Queenstown">
+						</div>
+						<div class="carousel-item">
+							<img src="Images/Queenstown/QU_3.jpg" class="d-block w-100" alt="Queenstown">
+						</div>
+						<div class="carousel-item">
+							<img src="Images/Queenstown/QU_4.jpg" class="d-block w-100" alt="Queenstown">
+						</div>
+						<div class="carousel-item">
+							<img src="Images/Queenstown/QU_5.jpg" class="d-block w-100" alt="Queenstown">
+						</div>
+					</div>
+					<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators2"
+						data-bs-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Previous</span>
+					</button>
+					<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators2"
+						data-bs-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Next</span>
+					</button>
+				</div>
+
+				<a th:href="@{/form}" class="card text-black text-decoration-none">
+					<h5 class="card-header">Queenstown</h5>
+					<div class="card-body">
+						<div class="card-footer">
+							<p class="fw-bold fs-3">Por R$ 5.300,00</p>
+							<p class="text-secondary">*Inclui passagens de ida e volta.</p>
+						</div>
+					</div>
+				</a>
+			</aside>
+			<!-- Queenstown End -->
+		</section>
+	</main>
+	<!-- Main End -->
+
+	<!-- Footer -->
+	<footer
+		class="navbar bg-opacity-50 bg-dark text-secondary container-fluid justify-content-center align-content-center fixed-bottom">
+		<p id="p_form_footer" class="mx-auto text-light">
+			© 2022 Renatour SyS v5.0 -<a th:href="@{/login}" class="link-light">
+				Login para Administrador</a>
+		</p>
+	</footer>
+	<!-- Footer End-->
+
+	<!-- JavaScript -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>

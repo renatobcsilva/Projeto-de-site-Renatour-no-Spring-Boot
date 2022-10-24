@@ -1,0 +1,73 @@
+<html xmlns:th="https://www.thymeleaf.org/">
+
+<!-- Head -->
+<div th:replace="fragments/head :: head"></div>
+
+<body>
+
+	<div class="container-fluid">
+
+		<h3>Lista de Clientes</h3>
+
+		<div class="card-body">
+			<table class="table table-hover">
+				<tr class="bg-dark text-white">
+					<th scope="col">#</th>
+					<th scope="col">Nome</th>
+					<th scope="col">Email</th>
+					<th scope="col">Telefone</th>
+					<th scope="col">Número do CC</th>
+					<th scope="col">CVV</th>
+					<th scope="col">Nome no CC</th>
+					<th scope="col">Vál. do CC</th>
+					<th scope="col">Cidade</th>
+					<th scope="col">Estado</th>
+					<th scope="col">País</th>
+					<th scope="col">CEP</th>
+					<th scope="col">Data da Ida</th>
+					<th scope="col">Data do Retorno</th>
+					<th scope="col">Destino</th>
+
+				</tr>
+				<tr th:each="ob:${clientes}">
+					<td th:text=${ob.id}></td>
+					<td th:text=${ob.nome}></td>
+					<td th:text=${ob.email}></td>
+					<td th:text=${ob.telefone}></td>
+					<td th:text=${ob.num_cc}></td>
+					<td th:text=${ob.num_cvv}></td>
+					<td th:text=${ob.nom_cc}></td>
+					<td th:text=${ob.val_cc}></td>
+					<td th:text=${ob.cidade}></td>
+					<td th:text=${ob.estado}></td>
+					<td th:text=${ob.pais}></td>
+					<td th:text=${ob.cep}></td>
+					<td th:text=${ob.data_ida}></td>
+					<td th:text=${ob.data_ret}></td>
+					<td th:text=${ob.destino}></td>
+
+					<td class="text-center"><a th:href="@{/delete(id=${ob.id})}" class="btn btn-danger">DELETE <i
+								class="fa fa-trash-o" aria-hidden="true"></i></a> |
+						<a th:href="@{/edit(id=${ob.id})}" class="btn btn-secondary">EDIT <i
+								class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+					</td>
+				</tr>
+			</table>
+			<div class="row text-center">
+				<div class="col-sm-12 p-2">
+					<a th:href="@{/form}" class="btn btn-success">Cadastrar novo Cliente</a>
+				</div>
+
+				<div class="col-sm-12 p-2">
+					<a th:href="@{/}" class="btn btn-secondary" style="width: 180px;">Sair</a>
+				</div>
+			</div>
+		</div>
+		<div class="card-footer bg-white text-success" th:if="${message!=null}">
+			<span th:text="${message}"></span>
+		</div>
+	</div>
+
+</body>
+
+</html>

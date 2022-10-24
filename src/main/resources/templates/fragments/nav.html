@@ -1,0 +1,35 @@
+<div th:fragment="nav">
+	<nav class="navbar navbar-expand-lg bg-opacity-25 bg-light fixed-top p-1">
+		<div class="container-fluid">
+			<a class="navbar-brand" th:href="@{/}"><img class="img-fluid" src="Images/Logo.png" alt="Logo"></a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+				data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse justify-content-end me-3" id="navbarSupportedContent">
+				<ul class="navbar-nav">
+					<li class="nav-item"><a class="btn btn-danger mx-1 my-1" th:href="@{/promo}"
+							role="button">Promoções</a></li>
+					<li class="navbar-item dropdown">
+						<button type="button" class="btn btn-warning dropdown-toggle mx-1 my-1"
+							data-bs-toggle="dropdown">Destinos</button>
+						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<li><a class="dropdown-item" th:href="@{/oz}">Austrália</a></li>
+							<li><a class="dropdown-item" th:href="@{/nz}">Nova
+									Zelândia</a></li>
+							<li>
+								<hr class="dropdown-divider">
+							</li>
+							<li><a class="dropdown-item" href="https://www4.mundodosvistos.com.br/"
+									target="_blank">Informações
+									sobre vistos</a></li>
+						</ul>
+					</li>
+					<li class="navbar-item"><a class="btn btn-success mx-1 my-1" th:href="@{/contato}"
+							role="button">Contato</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+</div>
